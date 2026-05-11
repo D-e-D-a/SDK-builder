@@ -1,0 +1,33 @@
+{
+  "name": "create-embed-sdk",
+  "version": "0.1.0",
+  "description": "Scaffold a production-grade iframe embed SDK for any React + Vite app",
+  "type": "module",
+  "bin": {
+    "create-embed-sdk": "./dist/cli.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup src/cli.ts --format esm --dts --clean --target node18",
+    "dev": "tsup src/cli.ts --format esm --watch --target node18",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "commander": "^12.1.0",
+    "fs-extra": "^11.2.0",
+    "kleur": "^4.1.5",
+    "prompts": "^2.4.2"
+  },
+  "devDependencies": {
+    "@types/fs-extra": "^11.0.4",
+    "@types/node": "^20.14.0",
+    "@types/prompts": "^2.4.9",
+    "tsup": "^8.1.0",
+    "typescript": "^5.5.0"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
